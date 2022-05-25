@@ -9,5 +9,6 @@
   },
   "dependencies": {
     "nuxt3": "^3.0.0-rc.3-27550969.a4a3cff"
-  }
+  },
+  "packageManager": "yarn@1.22.18"
 }
