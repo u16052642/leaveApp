@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "nuxt dev --port 5600 --host 0.0.0.0",
-    "build": "nuxi build"
+    "build": "nuxt build",
+    "geerate": "nuxt generate"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
