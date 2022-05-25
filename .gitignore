@@ -3,5 +3,5 @@
 *.env
 .code/
 node_modules
-.out
+.output
 .nuxt
