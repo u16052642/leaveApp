@@ -2,7 +2,7 @@
   "name": "poc-leave-management-system",
   "version": "1.0.0",
   "description": "POC Leave management system",
-  "author": "Divin Lonji <divin@gmail.com>",
+  "author": "Divin Lonji <divinlonji@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "nuxt dev --port 5600 --host 0.0.0.0",
