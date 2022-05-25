@@ -1,5 +1,5 @@
 # Main POC page
 
-<template src="./views/index.html"></template>
+<template src="./views/main.html"></template>
 <script></script>
 <style></style>
