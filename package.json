@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "POC Leave management system",
   "author": "Divin Lonji <divin@gmail.com>",
-  "license": "MIT"
-
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv": "^16.0.1"
+  }
 }
