@@ -17,7 +17,7 @@ const props = defineProps({
 const open = ref(false)
 // initialize Navigation items. this can be set and retrieved from pinia store as well
 const navItems: NavigationItems[] = [{
-  name: "home", url: '/',
+  name: "Home", url: '/',
 
 }, {
   name: "Leave Requests", url: '/leave',

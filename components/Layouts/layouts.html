@@ -41,7 +41,7 @@
         <div class="sm:hidden" id="mobile-menu" v-if="open">
             <div class="px-2 pt-2 pb-3 space-y-1">
 
-                <NuxtLink v-for="(item,index) in navItems" :key="index" :to="'/'" class="MobileLinks">{{ item.name }}</NuxtLink>
+                <NuxtLink v-for="(item,index) in navItems" :key="index" :to="item.url" class="MobileLinks">{{ item.name }}</NuxtLink>
 
             </div>
         </div>
