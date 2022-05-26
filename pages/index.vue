@@ -1,9 +1,6 @@
-# Main POC page
-
 <template>
   <NuxtLayout name="default">
-      <h1>Running on </h1>
+    <Home/>
   </NuxtLayout>
 </template>
-<script></script>
-<style src="./views/main.scss"></style>
+
