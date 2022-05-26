@@ -22,6 +22,7 @@
     "@vuepic/vue-datepicker": "^3.2.1",
     "nuxt": "npm:nuxt3@latest",
     "pinia": "^2.0.14",
+    "randomstring": "^1.2.2",
     "sass": "^1.52.1"
   },
   "packageManager": "yarn@1.22.18"
