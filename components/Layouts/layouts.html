@@ -1,0 +1,52 @@
+<section v-if="option==='default'">
+
+    <nav class="bg-gray-800">
+        <div class="desktop-cover">
+            <div class="main-items">
+                <div class="button-cover">
+                    <!-- Mobile menu button-->
+                    <button  @click="open=!open" type="button"
+                             class="button-styling focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                             aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+
+                        <svg v-if="open===false" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+<!--                     close icon -->
+                        <svg v-if="open===true" xmlns="http://www.w3.org/2000/svg" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="nav-title">
+                    <div class="flex-shrink-0 flex items-center">
+                       <a href="/" class="text-white text-3xl">{{$globalData().name}}</a>
+                    </div>
+
+                </div>
+                <div class="nav-items-cover">
+                    <div class="hidden sm:block sm:ml-6">
+                        <div class="flex space-x-4">
+                            <NuxtLink v-for="(item, index) in navItems" :key="index" :to="item.url" class=" hover:bg-gray-400 hover:rounded-md Links" aria-current="page">
+                                {{ item.name }}</NuxtLink>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu" v-if="open">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+
+                <NuxtLink v-for="(item,index) in navItems" :key="index" :to="'/'" class="MobileLinks">{{ item.name }}</NuxtLink>
+
+            </div>
+        </div>
+    </nav>
+    <main>
+        <slot/>
+    </main>
+</section>
