@@ -3,7 +3,7 @@
  */
 // @ts-ignore
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
-import {AppDetails} from "@/types";
+import {AppDetails} from "../types/app-details";
 export default defineNuxtPlugin(() => {
     // Access .env variables through runtime configuration options
     const config = useRuntimeConfig()
