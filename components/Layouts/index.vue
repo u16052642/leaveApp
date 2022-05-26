@@ -20,6 +20,6 @@ const navItems: NavigationItems[] = [{
   name: "Home", url: '/',
 
 }, {
-  name: "Leave Requests", url: '/leave',
+  name: "Leave Requests", url: '/leave-requests',
 }]
 </script>
