@@ -11,7 +11,6 @@ export default defineNuxtPlugin(() => {
         provide: {
             // Get global data
             globalData: ():AppDetails => {
-                console.log(config)
                 return {
                     name: config.APP_NAME,
                     shortName: config.SHORT_NAME,
