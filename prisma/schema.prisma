@@ -25,6 +25,6 @@ model User {
   lastName  String
   employeeId     String  @unique
   Leave     Leave[]
-  totalLeaveDays Int
+  totalLeaveDays Int @default(30)
  @@map("users")
 }
