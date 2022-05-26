@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'node_modules/@vuepic/vue-datepicker/src/VueDatePicker/style/main.scss';
+.input- {
+  @apply w-full border rounded-md p-3;
+}
+
+.home-input-label{
+  @apply block mb-2 text-sm font-medium text-gray-900;
+}
+
+.home-input-field{
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  w-full p-2.5 ;
+
+}
+
+html,body{
+  overflow-x: hidden !important;
+
+}
