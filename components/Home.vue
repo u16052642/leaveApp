@@ -51,9 +51,9 @@
 
           <div class="md:col-span-2">
             <label for="reason" class="home-input-label">
-              <span class="mb-1">Reason For taking Leave</span>
-              <textarea id="reason" class="home-input-field focus:ring-blue-500 focus:border-blue-500 block" rows="4"
-                        placeholder="Enter Your Surname" :required="true"></textarea>
+              <span class="mb-1 ">Reason For taking Leave</span>
+              <textarea id="reason" class="home-input-field focus:ring-blue-500 focus:border-blue-500 mt-2 block" rows="4"
+                        placeholder="Enter Your Surname" :required="true" v-model="leaveRequest.reason"></textarea>
             </label>
           </div>
         </div>
@@ -79,16 +79,13 @@ const leaveRequest: LeaveRequestData = {
   firstName: '',
   lastName: '',
   leaveType: '',
-  leaveDetails: {
-    leaveDays: 30,
-    usedLeaveDays: 0
-  },
   reason: '',
   leaveStartDate: ref(new Date()),
   leaveEndDate: ref(new Date()),
 }
 
-const leaveRequestFn = () => {
-  console.log(leaveRequest) // debug
+const leaveRequestFn = async () => {
+ const saveLeave = await $fetch('/api/leave-request', {method:"post", body: {...leaveRequest}})
+  console.log(saveLeave)
 }
 </script>
