@@ -21,5 +21,12 @@ const navItems: NavigationItems[] = [{
 
 }, {
   name: "Leave Requests", url: '/leave-requests',
-}]
+},
+  , {
+    name: "Login", url: '/auth-login',
+  },
+  {
+    name: "Register", url: '/auth-register',
+  }
+]
 </script>

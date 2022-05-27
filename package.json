@@ -20,7 +20,6 @@
     "@pinia/nuxt": "^0.1.9",
     "@prisma/client": "^3.14.0",
     "@vuepic/vue-datepicker": "^3.2.1",
-    "googleapis": "^100.0.0",
     "nuxt": "npm:nuxt3@latest",
     "pinia": "^2.0.14",
     "randomstring": "^1.2.2",

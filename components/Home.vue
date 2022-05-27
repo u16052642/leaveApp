@@ -74,7 +74,7 @@
 import Datepicker from '@vuepic/vue-datepicker';
 import {LeaveRequestData} from "../types/form-input-types";
 
-const leaveType: string[] = ['Maternity', "Sick", "Annual", "Family Responsibility", "Study", "Quarantine", "Casual"]
+const leaveType: string[] = ['Maternity', "Sick", "Annual", "Family", "Study", "Quarantine", "Casual"]
 const leaveRequest: LeaveRequestData = {
   firstName: '',
   lastName: '',

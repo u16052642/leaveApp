@@ -16,6 +16,8 @@ model Leave {
   endDate   DateTime
   owner     User     @relation(fields: [userId], references: [id])
   userId Int
+  type LeaveType @default(Annual)
+  reason String
   @@map("leave")
 }
 // Define User Model
@@ -27,4 +29,14 @@ model User {
   Leave     Leave[]
   totalLeaveDays Int @default(30)
  @@map("users")
+}
+
+enum LeaveType {
+Maternity
+Sick
+Annual
+Family
+Study
+Quarantine
+Casual
 }

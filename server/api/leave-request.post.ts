@@ -10,20 +10,26 @@ export default defineEventHandler(async (event) => {
     if (!body.employeeId) {
         body.employeeId = random.generate({length: 12, charset: 'alphanumeric'})
     }
-    const save = await prisma.leave.create({
-        data: {
-            startDate: body.leaveStartDate,
-            endDate: body.leaveEndDate,
-            owner: {
-               create: {
-                   firstName: body.firstName,
-                   lastName: body.lastName,
-                   employeeId:body.employeeId,
+    try {
+        const save = await prisma.leave.create({
+            data: {
+                startDate: body.leaveStartDate,
+                endDate: body.leaveEndDate,
+                type: body.leaveType,
+                reason: body.reason,
+                owner: {
+                    create: {
+                        firstName: body.firstName,
+                        lastName: body.lastName,
+                        employeeId: body.employeeId,
 
-               }
+                    }
+                }
             }
-        }
-    })
-    setCookie(event.res, 'auth-cookie', body.employeeId)
-    return {save}
+        })
+        setCookie(event.res, 'auth-cookie', body.employeeId)
+        return {save}
+    } catch (e) {
+        return e.message
+    }
 })

@@ -49,3 +49,4 @@ ___SASS + TailwindCss___
 ----
 Using Sass and TailwindCss in this project will fastback development process and reduce boilerplate css through mixins, functions and other functionalities offered by SASS
 
+ Read the app server [Server Readme](./SERVER_README.md)

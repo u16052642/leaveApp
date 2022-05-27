@@ -7,7 +7,7 @@ module.exports = {
     script: './.output/server/index.mjs', // default nuxt3 build folder
     watch: './.output', // enable watch mode.
     exec_mode: 'cluster',
-    instances: '2', // possible values are : all or number of instances in this case we want to spin 2 instances.
+    instances: '4', // possible values are : all or number of instances in this case we want to spin 2 instances.
     env: {
     PORT: currentEnv.PORT
     }
